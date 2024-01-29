@@ -1,19 +1,28 @@
-<header class="">
-  <div class="px-10 mx-auto flex flex-wrap py-6 items-center justify-between">
-    <div
-      class="md:flex hidden border border-whiteColor md:px-10 py-1 rounded-xl title-font font-medium items-center lg:items-center lg:justify-start"
-    >
-      <span class="material-symbols-outlined text-whiteColor"> wb_sunny </span>
-    </div>
-    <div
-      class="flex md:hidden border border-whiteColor px-6 py-1 rounded-xl title-font font-medium items-center lg:items-center lg:justify-start"
-    >
-      <span class="material-symbols-outlined text-whiteColor"> menu </span>
+<header class="fixed top-0 right-0 left-0">
+  <div
+    class="md:px-8 px-4 mx-auto flex flex-wrap py-6 items-center justify-between"
+  >
+    <div class="flex overflow-hidden gap-2 cursor-pointe">
+      <div
+        class="flex lg:hidden items-center lg:items-center lg:justify-start"
+        (click)="showitems()"
+      >
+        <span class="material-symbols-outlined text-whiteColor"> menu </span>
+      </div>
+      <!-- //// -->
+
+      <div
+        class="flex items-center justify-start border border-whiteColor lg:px-10 px-1 py-1 lg:rounded-xl rounded-full"
+      >
+        <span class="material-symbols-outlined text-whiteColor">
+          wb_sunny
+        </span>
+      </div>
     </div>
 
     <nav
       appBg
-      class="md:flex flex-wrap md:flex-row-reverse hidden justify-between items-center lg:w-[65%] w-[60%] lg:text-[20px] text-[16px]"
+      class="lg:flex flex-wrap lg:flex-row-reverse hidden justify-between items-center lg:w-[65%] w-[55%] lg:text-[20px] text-[14px]"
     >
       <a routerLink="mainPage" [routerLinkActive]="'active'">الرئيسية</a>
       <a routerLink="about" [routerLinkActive]="'active'">عن يو جي تك</a>
@@ -26,8 +35,45 @@
     <div class="inline-flex items-center justify-center">
       <img
         [src]="'assets/Logo.svg'"
-        class="lg:w-[158.01px] lg:h-[75.17px] w-[130.01px] h-[63px]"
+        class="lg:w-[130px] lg:h-[70px] w-[110.56px] h-[56.77px]"
       />
     </div>
   </div>
 </header>
+<!-- S -->
+<div *ngIf="isItemsShowed" class="z-0 bg-blackColor w-[176px] h-screen">
+  <div class="flex items-center justify-center py-4">
+    <img
+      [src]="'assets/Logo.svg'"
+      class="lg:w-[130px] lg:h-[70px] w-[110.56px] h-[56.77px]"
+    />
+
+    <span
+      class="material-symbols-outlined text-whiteColor"
+      (click)="closeNav()"
+    >
+      close
+    </span>
+  </div>
+  <nav
+    class="flex flex-col items-center justify-center mt-[50px] gap-[35px] text-[16px] text-whiteColor"
+  >
+    <a routerLink="mainPage" [routerLinkActive]="'activeNav'">الرئيسية</a>
+    <a routerLink="about" [routerLinkActive]="'activeNav'">عن يو جي تك</a>
+    <a routerLink="team" [routerLinkActive]="'activeNav'">فريق العمل</a>
+    <a routerLink="job" [routerLinkActive]="'activeNav'">الوظيفة</a>
+    <a routerLink="contact" [routerLinkActive]="'activeNav'">تواصل معنا</a>
+    <a routerLink="rights" [routerLinkActive]="'activeNav'">
+      الشروط و الاحكام</a
+    >
+    <a>تواصل معنا</a>
+    <a class="flex gap-4">
+      <h1>+201011115145</h1>
+      <img [src]="'assets/phone.svg'"
+    /></a>
+    <a class="flex gap-4">
+      <h1>+infougetic.com</h1>
+      <img [src]="'assets/email.svg'"
+    /></a>
+  </nav>
+</div>
