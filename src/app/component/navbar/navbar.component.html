@@ -1,0 +1,33 @@
+<header class="">
+  <div class="px-10 mx-auto flex flex-wrap py-6 items-center justify-between">
+    <div
+      class="md:flex hidden border border-whiteColor md:px-10 py-1 rounded-xl title-font font-medium items-center lg:items-center lg:justify-start"
+    >
+      <span class="material-symbols-outlined text-whiteColor"> wb_sunny </span>
+    </div>
+    <div
+      class="flex md:hidden border border-whiteColor px-6 py-1 rounded-xl title-font font-medium items-center lg:items-center lg:justify-start"
+    >
+      <span class="material-symbols-outlined text-whiteColor"> menu </span>
+    </div>
+
+    <nav
+      appBg
+      class="md:flex flex-wrap md:flex-row-reverse hidden justify-between items-center lg:w-[65%] w-[60%] lg:text-[20px] text-[16px]"
+    >
+      <a routerLink="mainPage" [routerLinkActive]="'active'">الرئيسية</a>
+      <a routerLink="about" [routerLinkActive]="'active'">عن يو جي تك</a>
+      <a routerLink="team" [routerLinkActive]="'active'">فريق العمل</a>
+      <a routerLink="job" [routerLinkActive]="'active'">الوظيفة</a>
+      <a routerLink="contact" [routerLinkActive]="'active'">تواصل معنا</a>
+      <a routerLink="rights" [routerLinkActive]="'active'"> الشروط و الاحكام</a>
+    </nav>
+
+    <div class="inline-flex items-center justify-center">
+      <img
+        [src]="'assets/Logo.svg'"
+        class="lg:w-[158.01px] lg:h-[75.17px] w-[130.01px] h-[63px]"
+      />
+    </div>
+  </div>
+</header>
