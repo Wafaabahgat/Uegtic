@@ -41,7 +41,7 @@
   </div>
 </header>
 <!-- S -->
-<div *ngIf="isItemsShowed" class="z-0 bg-blackColor w-[176px] h-screen">
+<div *ngIf="isItemsShowed" class="z-0 bg-blackColor top-0 right-0 left-0 w-[176px] h-full">
   <div class="flex items-center justify-center py-4">
     <img
       [src]="'assets/Logo.svg'"
@@ -56,7 +56,7 @@
     </span>
   </div>
   <nav
-    class="flex flex-col items-center justify-center mt-[50px] gap-[35px] text-[16px] text-whiteColor"
+    class="flex flex-col items-center justify-center mt-[50px] gap-[35px] text-[16px]  text-whiteColor"
   >
     <a routerLink="mainPage" [routerLinkActive]="'activeNav'">الرئيسية</a>
     <a routerLink="about" [routerLinkActive]="'activeNav'">عن يو جي تك</a>
