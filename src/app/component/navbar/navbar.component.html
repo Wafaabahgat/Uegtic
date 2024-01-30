@@ -7,14 +7,14 @@
         class="flex lg:hidden items-center lg:items-center lg:justify-start"
         (click)="showitems()"
       >
-        <span class="material-symbols-outlined text-whiteColor"> menu </span>
+        <span class="material-symbols-outlined text-whiteColor cursor-pointer"> menu </span>
       </div>
       <!-- //// -->
 
       <div
         class="flex items-center justify-start border border-whiteColor lg:px-10 px-1 py-1 lg:rounded-xl rounded-full"
       >
-        <span class="material-symbols-outlined text-whiteColor">
+        <span class="material-symbols-outlined cursor-pointer text-whiteColor">
           wb_sunny
         </span>
       </div>
@@ -41,7 +41,11 @@
   </div>
 </header>
 <!-- S -->
-<div *ngIf="isItemsShowed" class="z-0 bg-blackColor top-0 right-0 left-0 w-[176px] h-full">
+
+<div
+  *ngIf="isItemsShowed"
+  class="z-11 fixed inset-0 backdrop-blur-[8px] bg-blackColor top-0 right-0 left-0 w-[176px] h-screen"
+>
   <div class="flex items-center justify-center py-4">
     <img
       [src]="'assets/Logo.svg'"
@@ -49,14 +53,14 @@
     />
 
     <span
-      class="material-symbols-outlined text-whiteColor"
+      class="material-symbols-outlined cursor-pointer text-whiteColor"
       (click)="closeNav()"
     >
       close
     </span>
   </div>
   <nav
-    class="flex flex-col items-center justify-center mt-[50px] gap-[35px] text-[16px]  text-whiteColor"
+    class="flex flex-col items-center justify-center mt-[50px] gap-[35px] text-[16px] text-whiteColor"
   >
     <a routerLink="mainPage" [routerLinkActive]="'activeNav'">الرئيسية</a>
     <a routerLink="about" [routerLinkActive]="'activeNav'">عن يو جي تك</a>
