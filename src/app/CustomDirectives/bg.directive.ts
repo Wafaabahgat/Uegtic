@@ -13,3 +13,4 @@ export class BgDirective {
     this.element.nativeElement.style.color = '#6A6A6A';
   }
 }
+

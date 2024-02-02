@@ -1,1 +1,13 @@
-<p class="text-green-700">team works!</p>
+<section class="flex items-center justify-center h-screen">
+  <div
+    class="bg-mainBg flex items-center justify-between flex-col px-12 py-4 w-[75%]"
+  >
+    <h1 class="text-[16px] font-bold text-whitColor text-end">فريق العمل</h1>
+    <span class="h-[1px] my-2 w-full border text-whiteColor"></span>
+    <app-team1 />
+    <span class="h-[1px] my-2 w-full border text-whiteColor"></span>
+    <app-team1 [className]="'lg:flex hidden'" />
+    <span class="h-[1px] my-2 w-full border text-whiteColor"></span>
+    <app-team1 [className]="'lg:flex hidden'" />
+  </div>
+</section>

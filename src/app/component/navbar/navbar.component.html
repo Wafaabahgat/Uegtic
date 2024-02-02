@@ -7,7 +7,9 @@
         class="flex lg:hidden items-center lg:items-center lg:justify-start"
         (click)="showitems()"
       >
-        <span class="material-symbols-outlined text-whiteColor cursor-pointer"> menu </span>
+        <span class="material-symbols-outlined text-whiteColor cursor-pointer">
+          menu
+        </span>
       </div>
       <!-- //// -->
 
@@ -40,8 +42,8 @@
     </div>
   </div>
 </header>
-<!-- S -->
 
+<!-- Mobile Screen -->
 <div
   *ngIf="isItemsShowed"
   class="z-11 fixed inset-0 backdrop-blur-[8px] bg-blackColor top-0 right-0 left-0 w-[176px] h-screen"

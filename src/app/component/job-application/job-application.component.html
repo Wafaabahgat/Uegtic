@@ -1,1 +1,72 @@
-<p class="text-green-700">job-application works!</p>
+<section class="flex flex-col items-center justify-center h-screen">
+  <h1 class="text-2xl text-whiteColor">انضم الي فريق العمل</h1>
+  <form class="grid lg:grid-cols-2 grid-cols-1 lg:gap-y-6 gap-y-2 gap-x-14 lg:mt-10 mt-4">
+    <div class="flex flex-col">
+      <label class="text-sm text-whiteColor text-end mb-2"
+        >* الوظيفية المتقدم لها</label
+      >
+      <input
+        class="bg-mainBg outline-none rounded-md py-1 px-10"
+        type="text"
+        name="job"
+        id="job"
+      />
+    </div>
+    <div class="flex flex-col">
+      <label class="text-sm text-whiteColor text-end mb-2">* الاسم</label>
+      <input
+        class="bg-mainBg outline-none rounded-md py-1 px-10"
+        type="text"
+        name="name"
+        id="name"
+      />
+    </div>
+    <div class="flex flex-col">
+      <label class="text-sm text-whiteColor text-end mb-2"> * الهاتف</label>
+      <input
+        class="bg-mainBg outline-none rounded-md py-1 px-10"
+        type="text"
+        name="phone"
+        id="phone"
+      />
+    </div>
+    <div class="flex flex-col">
+      <label class="text-sm text-whiteColor text-end mb-2">
+        * البريد الالكتروني</label
+      >
+      <input
+        class="bg-mainBg outline-none rounded-md py-1 px-10"
+        type="email"
+        name="email"
+        id="email"
+        required
+      />
+    </div>
+    <div class="flex flex-col">
+      <label class="text-sm text-whiteColor text-end mb-2">
+        * تاريخ الميلاد</label
+      >
+      <input
+        class="bg-mainBg outline-none rounded-md py-1 px-10"
+        type="text"
+        name="date"
+        id="date"
+      />
+    </div>
+
+    <div class="flex flex-col">
+      <label class="text-sm text-whiteColor text-end mb-2"> * المؤهلات</label>
+      <input
+        class="bg-mainBg outline-none rounded-md py-1 px-10"
+        type="text"
+        name="qualif"
+        id="qualif"
+      />
+    </div>
+    <button
+      class="border  border-borderColor font-bold text-[16px] py-3 px-28 rounded-md text-borderColor"
+    >
+      إرسال
+    </button>
+  </form>
+</section>
