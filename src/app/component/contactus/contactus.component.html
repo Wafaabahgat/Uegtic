@@ -1,1 +1,64 @@
-<p class="text-green-700">contactus works!</p>
+<section class="flex flex-col items-center justify-center h-screen">
+  <div class="flex justify-end items-center ">
+    <form>
+      <div
+        class="grid lg:grid-cols-2 grid-cols-1 lg:gap-y-6 gap-y-2 gap-x-6 lg:mt-10 mt-4"
+      >
+        <app-input
+          [title]="'البريد الالكتروني'"
+          [type]="'text'"
+          [name]="'job'"
+          [id]="'job'"
+        />
+        <app-input
+          [title]="'الاسم'"
+          [type]="'text'"
+          [name]="'name'"
+          [id]="'name'"
+        />
+      </div>
+      <div class="flex flex-col mt-2">
+        <label class="text-sm text-whiteColor text-end mb-2">* رسالتك</label>
+        <textarea
+          class="bg-mainBg outline-none rounded-md p-2 w-full"
+        ></textarea>
+      </div>
+      <div class="flex items-center justify-center mt-6">
+        <button
+          class="border border-borderColor font-bold text-[16px] py-3 text-center lg:w-40 w-full rounded-md text-borderColor"
+        >
+          إرسال
+        </button>
+      </div>
+    </form>
+    <div
+      class="bg-blackColor h-screen w-[203px] lg:flex hidden items-center justify-center"
+    >
+      <div class="">
+        <h2 class="text-whiteColor text-[18px] text-center font-bold">
+          تواصل معنا
+        </h2>
+        <p class="text-whiteColor text-[11px] text-end px-1 mb-10">
+          إذا كان لديك اي استفار يرجي التواصل معنا ترك رسالت وسوف يتم التواصب
+          معك
+        </p>
+        <div class="mb-5">
+          <a>تواصل معنا</a>
+          <a class="flex gap-4 justify-evenly">
+            <h1 class="text-whiteColor">+201011115145</h1>
+            <img [src]="'assets/phone.svg'"
+          /></a>
+        </div>
+        <div class="">
+          <a class="flex gap-4 justify-evenly">
+            <h1 class="text-whiteColor">+infougetic.com</h1>
+            <img [src]="'assets/email.svg'"
+          /></a>
+        </div>
+        <div class="flex  justify-end">
+          <img src="assets/Ellipse1.svg" class="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

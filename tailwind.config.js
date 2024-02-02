@@ -15,6 +15,7 @@ module.exports = {
         mainBg: "#363636",
         borderColor: "#0945FF",
         lineColor: "#BCBCBC",
+        bordergray:"#4D4D4D"
       },
     },
     // gridTemplateColumns: {

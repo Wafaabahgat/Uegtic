@@ -1,0 +1,27 @@
+<div class="bg-mainBg flex flex-col my-5 p-3 rounded-md">
+  <div class="flex justify-between px-4">
+    <span
+      (click)="Onclick()"
+      class="material-symbols-outlined border border-bordergray rounded-full p-2 text-borderColor"
+    >
+      expand_more
+    </span>
+    <h1 class="text-2xl text-whiteColor">حقوق الملكية الفكرية</h1>
+  </div>
+  <span class="h-[1px] my-2 w-full border text-whiteColor"></span>
+  <div *ngIf="text">
+    <h4 class="text-[16px] text-whiteColor text-end">
+      : حقوق النشر والتأليف
+    </h4>
+    <p class="text-[16px] text-whiteColor text-end">
+      جميع محتويات هذا الموقع ولكن بدون الاقتصار على (النصوص والشعارات
+      والصور والرسوم البيانية والتسجيلات الصوتية وأيقونات الأزرار والمحتويات
+      الرقمية والمواد التي يتم إعادة تحميلها والبرمجيات وتجميع البيانات)
+      وجميع محتويات ڤودافون مصر و/أو الموردين التابعين لها/اى طرف ثالث من
+      الغير، وتجميع كافة المحتويات الموجودة على هذا الموقع وكافة البرمجيات
+      المستخدمة في هذا الموقع وموردي البرمجيات، هى ملك حصري وخاص بڤودافون
+      مصر وتخضع لحكم قانون حق النشر المصري، وقانون حق النشر الدولي،
+      والاتفاقيات نافذة المفعول مثل اتفاقية بيرن وتريبس.
+    </p>
+  </div>
+</div>

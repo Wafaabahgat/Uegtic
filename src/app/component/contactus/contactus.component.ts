@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
+import { InputComponent } from '../input/input.component';
 
 @Component({
   selector: 'app-contactus',
   standalone: true,
-  imports: [],
+  imports: [InputComponent],
   templateUrl: './contactus.component.html',
-  styleUrl: './contactus.component.css'
+  styleUrl: './contactus.component.css',
 })
-export class ContactusComponent {
-
-}
+export class ContactusComponent {}
