@@ -1,13 +1,13 @@
-<section class="flex items-center justify-center h-screen">
+<section class="flex items-center justify-center lg:mt-14 mt-0 h-screen">
   <div
-    class="bg-mainBg flex items-center justify-between flex-col px-12 py-4 w-[75%]"
+    class="bg-mainBg flex  justify-between flex-col px-12 py-4 w-[75%]"
   >
-    <h1 class="text-[16px] font-bold text-whitColor text-end">فريق العمل</h1>
+    <h1 class="lg:text-[16px] text-[14px] font-bold text-whitColor text-end">فريق العمل</h1>
     <span class="h-[1px] my-2 w-full border text-whiteColor"></span>
     <app-team1 />
-    <span class="h-[1px] my-2 w-full border text-whiteColor"></span>
+    <span class="h-[1px] my-2 w-full border lg:block hidden text-whiteColor"></span>
     <app-team1 [className]="'lg:flex hidden'" />
-    <span class="h-[1px] my-2 w-full border text-whiteColor"></span>
+    <span class="h-[1px] my-2 w-full border lg:block hidden text-whiteColor"></span>
     <app-team1 [className]="'lg:flex hidden'" />
   </div>
 </section>
