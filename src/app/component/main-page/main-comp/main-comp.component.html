@@ -2,10 +2,15 @@
   <div
     class="lg:p-6 rounded-lg flex lg:flex-col flex-row-reverse items-center justify-center"
   >
-    <img [src]="imageSrc" alt="content" [ngClass]="className" />
+    <div
+      class="lg:w-[240px] w-[144px] lg:h-[170px] h-[144px] lg:hover:rounded-t-md hover:rounded-t-none lg:hover:rounded-tr-md lg:hover:rounded-r-none hover:rounded-r-md flex items-center justify-center text-center hover:bg-textNavColor"
+    >
+      <img [src]="imageSrc" alt="content" [ngClass]="className" />
+    </div>
+
     <div
       [ngClass]="BgColor"
-      class="text-center mt-4 flex items-center justify-center lg:w-[240px] w-[144.8px] lg:h-[60px] h-[144px] lg:rounded-b-lg lg:rounded-tl-none rounded-l-lg"
+      class="text-center flex items-center justify-center lg:w-[240px] w-[144.8px] lg:h-[60px] h-[144px] lg:rounded-b-lg lg:rounded-tl-none rounded-l-lg"
     >
       <h3 class="text-whiteColor text-[16px]">
         <span class="font-bold text-[24px]"> {{ TARGET }} </span>by UGETIC
