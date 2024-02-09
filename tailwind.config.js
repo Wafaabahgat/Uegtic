@@ -1,9 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class",
   content: ["./src/**/*.{html,ts}"],
   theme: {
     extend: {
       colors: {
+        dark:{
+          darkblackColor: "#000000",
+          darkwhiteColor: "#FFFFFF",
+        },
         blackColor: "#000000",
         whiteColor: "#FFFFFF",
         whitColor: "#FFF9F9",
@@ -15,8 +20,8 @@ module.exports = {
         mainBg: "#363636",
         borderColor: "#0945FF",
         lineColor: "#BCBCBC",
-        bordergray:"#4D4D4D",
-        uploadImg:'#919191'
+        bordergray: "#4D4D4D",
+        uploadImg: "#919191",
       },
     },
     // gridTemplateColumns: {

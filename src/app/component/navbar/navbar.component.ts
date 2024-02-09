@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { BgDirective } from '../../CustomDirectives/bg.directive';
-import { flush } from '@angular/core/testing';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -13,11 +12,28 @@ import { CommonModule } from '@angular/common';
 })
 export class NavbarComponent {
   isItemsShowed: boolean = false;
+
+  // darkMode = signal<boolean>(false);
+  // @HostBinding('class.dark') get mode() {
+  //   if (this.darkMode()) {
+  //     document.body.style.backgroundImage = 'url(./assets/lightBG.svg)';
+  //     if (window.matchMedia('(max-width: 1020px)')) {
+  //       document.body.style.backgroundImage = 'url(./assets/lightBGSmall.svg)';
+  //     }
+  //     return this.darkMode();
+  //   }
+  //   document.body.style.backgroundImage = 'url(./assets/Background.svg)';
+  //   if (window.matchMedia('(max-width: 1020px)')) {
+  //     document.body.style.backgroundImage = 'url(./assets/smallBackground.svg)';
+  //   }
+  //   return this.darkMode();
+  // }
+
   showitems(): void {
     console.log('open navigation menu');
     this.isItemsShowed = !this.isItemsShowed;
   }
-  
+
   closeNav(): void {
     console.log('Closing navigation menu');
     this.isItemsShowed = false;

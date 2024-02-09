@@ -21,6 +21,7 @@ body {
   background-position: 0 60%;
   width: 100vw;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 @media (max-width: 1020px) {

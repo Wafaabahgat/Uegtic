@@ -12,14 +12,24 @@
         </span>
       </div>
       <!-- //// -->
-
-      <div
-        class="flex items-center justify-start border border-whiteColor lg:px-10 px-1 py-1 lg:rounded-xl rounded-full"
-      >
-        <span class="material-symbols-outlined cursor-pointer text-whiteColor">
-          wb_sunny
-        </span>
-      </div>
+      <button (click)="darkMode.set(!darkMode())">
+        <div
+          class="flex items-center justify-start border border-whiteColor lg:px-10 px-1 py-1 lg:rounded-xl rounded-full"
+        >
+          <span
+            *ngIf="darkMode()"
+            class="material-symbols-outlined cursor-pointer text-whiteColor"
+          >
+            dark_mode
+          </span>
+          <span
+            *ngIf="!darkMode()"
+            class="material-symbols-outlined cursor-pointer text-whiteColor"
+          >
+            light_mode
+          </span>
+        </div>
+      </button>
     </div>
 
     <nav
