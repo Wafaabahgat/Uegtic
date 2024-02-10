@@ -1,4 +1,10 @@
-import { Component, HostBinding, signal } from '@angular/core';
+import {
+  Component,
+  HostBinding,
+  Output,
+  signal,
+  EventEmitter,
+} from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { BgDirective } from '../../CustomDirectives/bg.directive';
 import { CommonModule } from '@angular/common';
@@ -13,21 +19,24 @@ import { CommonModule } from '@angular/common';
 export class NavbarComponent {
   isItemsShowed: boolean = false;
 
-  // darkMode = signal<boolean>(false);
-  // @HostBinding('class.dark') get mode() {
-  //   if (this.darkMode()) {
-  //     document.body.style.backgroundImage = 'url(./assets/lightBG.svg)';
-  //     if (window.matchMedia('(max-width: 1020px)')) {
-  //       document.body.style.backgroundImage = 'url(./assets/lightBGSmall.svg)';
-  //     }
-  //     return this.darkMode();
-  //   }
-  //   document.body.style.backgroundImage = 'url(./assets/Background.svg)';
-  //   if (window.matchMedia('(max-width: 1020px)')) {
-  //     document.body.style.backgroundImage = 'url(./assets/smallBackground.svg)';
-  //   }
-  //   return this.darkMode();
-  // }
+  darkMode = signal<boolean>(false);
+  @HostBinding('class.darkk') get mode() {
+    if (this.darkMode()) {
+      document.body.classList.remove('dark');
+      document.body.style.backgroundImage = 'url(./assets/lightBG.svg)';
+      if (window.matchMedia('(max-width: 1020px)')) {
+        document.body.style.backgroundImage = 'url(./assets/lightBGSmall.svg)';
+      }
+      return this.darkMode();
+    }
+    document.body.classList.add('dark');
+
+    document.body.style.backgroundImage = 'url(./assets/Background.svg)';
+    if (window.matchMedia('(max-width: 1020px)')) {
+      document.body.style.backgroundImage = 'url(./assets/smallBackground.svg)';
+    }
+    return this.darkMode();
+  }
 
   showitems(): void {
     console.log('open navigation menu');

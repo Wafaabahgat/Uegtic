@@ -7,24 +7,26 @@
         class="flex lg:hidden items-center lg:items-center lg:justify-start"
         (click)="showitems()"
       >
-        <span class="material-symbols-outlined text-whiteColor cursor-pointer">
+        <span
+          class="material-symbols-outlined dark:text-whiteColor text-blackColor cursor-pointer"
+        >
           menu
         </span>
       </div>
       <!-- //// -->
       <button (click)="darkMode.set(!darkMode())">
         <div
-          class="flex items-center justify-start border border-whiteColor lg:px-10 px-1 py-1 lg:rounded-xl rounded-full"
+          class="flex items-center justify-start border dark:border-whiteColor border-blackColor lg:px-10 px-1 py-1 lg:rounded-xl rounded-full"
         >
           <span
             *ngIf="darkMode()"
-            class="material-symbols-outlined cursor-pointer text-whiteColor"
+            class="material-symbols-outlined cursor-pointer dark:text-whiteColor text-blackColor"
           >
             dark_mode
           </span>
           <span
             *ngIf="!darkMode()"
-            class="material-symbols-outlined cursor-pointer text-whiteColor"
+            class="material-symbols-outlined cursor-pointer dark:text-whiteColor text-blackColor"
           >
             light_mode
           </span>
@@ -87,7 +89,7 @@
 <!-- Mobile Screen -->
 <div
   *ngIf="isItemsShowed"
-  class="z-[100] fixed inset-0 backdrop-blur-[8px] bg-blackColor w-[176px] h-screen"
+  class="z-[100] fixed inset-0 backdrop-blur-[8px] dark:bg-blackColor bg-borderColor w-[176px] h-screen"
 >
   <div class="flex items-center justify-center py-4">
     <img

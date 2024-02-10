@@ -1,4 +1,4 @@
-import { Component, HostBinding, signal } from '@angular/core';
+import {  Component,  signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './component/navbar/navbar.component';
@@ -19,22 +19,27 @@ import { DarkModeService } from './dark-mode.service';
   styleUrl: './app.component.css',
   providers: [DarkModeService],
 })
-export class AppComponent {
+export class AppComponent  {
   title = 'Uegtic';
-
   darkMode = signal<boolean>(false);
-  @HostBinding('class.dark') get mode() {
-    if (this.darkMode()) {
-      document.body.style.backgroundImage = 'url(./assets/lightBG.svg)';
-      if (window.matchMedia('(max-width: 1020px)')) {
-        document.body.style.backgroundImage = 'url(./assets/lightBGSmall.svg)';
-      }
-      return this.darkMode();
-    }
-    document.body.style.backgroundImage = 'url(./assets/Background.svg)';
-    if (window.matchMedia('(max-width: 1020px)')) {
-      document.body.style.backgroundImage = 'url(./assets/smallBackground.svg)';
-    }
-    return this.darkMode();
-  }
+  // @HostBinding('class.dark') get mode() {
+    // return this.darkMode;
+  // }
+  // dark(e: any) {
+    // console.log(e);
+    // this.darkMode = e;
+  // }
+
+  // @ViewChildren('child1, child2') childElements!: QueryList<ElementRef>;
+
+  // constructor(private renderer: Renderer2) {}
+
+  // ngAfterViewInit() {
+    // this.childElements.forEach((childElement: ElementRef) => {
+      // const hasDarkClass = childElement.nativeElement.classList.contains('dark');
+      // if (hasDarkClass) {
+        // this.renderer.addClass(childElement.nativeElement, 'dark');
+      // }
+    // });
+  // }
 }

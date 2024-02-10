@@ -5,10 +5,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        dark:{
-          darkblackColor: "#000000",
-          darkwhiteColor: "#FFFFFF",
-        },
         blackColor: "#000000",
         whiteColor: "#FFFFFF",
         whitColor: "#FFF9F9",
@@ -22,6 +18,7 @@ module.exports = {
         lineColor: "#BCBCBC",
         bordergray: "#4D4D4D",
         uploadImg: "#919191",
+        Color: "#525252",
       },
     },
     // gridTemplateColumns: {
